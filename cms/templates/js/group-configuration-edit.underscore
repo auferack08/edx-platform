@@ -5,6 +5,19 @@
           <%= gettext(error.message) %>
         </div>
     <% } %>
+    <% if (!_.isEmpty(usage)) { %>
+      <div class="group-configuration-edit-validation message message-status message-status error is-shown" name="group-configuration-edit-error">
+        <h4 class="group-configuration-edit-validation-text"><%= gettext('Warnings:') %></h4>
+        <ol class="group-configuration-edit-validation-list">
+          <% _.each(usage, function(unit) { %>
+            <li class="group-configuration-edit-validation-unit">
+              <p><a href=<%= unit.url %> ><%= unit.label %></a> : </p>
+              <p><%= unit.validation %></p>
+            </li>
+          <% }) %>
+        </ol>
+      </div>
+    <% } %>
         <fieldset class="group-configuration-fields">
             <legend class="sr"><%= gettext("Group Configuration information") %></legend>
             <div class="input-wrap field text required add-group-configuration-name <% if(error && error.attributes && error.attributes.name) { print('error'); } %>">

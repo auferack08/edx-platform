@@ -62,7 +62,8 @@
       <ol class="group-configuration-usage">
         <% _.each(usage, function(unit) { %>
           <li class="group-configuration-usage-unit">
-            <a href=<%= unit.url %> ><%= unit.label %></a>
+            <p><a href=<%= unit.url %> ><%= unit.label %></a></p>
+            <p><%= unit.validation %></p>
           </li>
         <% }) %>
       </ol>
