@@ -1084,9 +1084,13 @@ class SplitMongoModuleStore(ModuleStoreWriteBase):
         if fields is not None:
             self._update_search_targets(index_entry, fields)
         self.db_connection.insert_course_index(index_entry)
+
         # expensive hack to persist default field values set in __init__ method (e.g., wiki_slug)
         course = self.get_course(locator)
-        return self.update_item(course, user_id)
+        course = self.update_item(course, user_id)
+
+        return course
+
 
     def update_item(self, descriptor, user_id, allow_not_found=False, force=False):
         """

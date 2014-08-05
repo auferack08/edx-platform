@@ -5,7 +5,6 @@ Module for the dual-branch fall-back Draft->Published Versioning ModuleStore
 from ..exceptions import ItemNotFoundError
 from split import SplitMongoModuleStore, EXCLUDE_ALL
 from xmodule.modulestore import ModuleStoreEnum, PublishState
-from xmodule.modulestore.exceptions import InsufficientSpecificationError
 from xmodule.modulestore.draft_and_published import ModuleStoreDraftAndPublished, DIRECT_ONLY_CATEGORIES, UnsupportedRevisionError
 
 
@@ -78,6 +77,7 @@ class DraftVersioningModuleStore(ModuleStoreDraftAndPublished, SplitMongoModuleS
         definition_locator=None, fields=None,
         force=False, continue_version=False, **kwargs
     ):
+        course_key = self._map_revision_to_branch(course_key)
         item = super(DraftVersioningModuleStore, self).create_item(
             user_id, course_key, block_type, block_id=block_id,
             definition_locator=definition_locator, fields=fields,
@@ -90,6 +90,7 @@ class DraftVersioningModuleStore(ModuleStoreDraftAndPublished, SplitMongoModuleS
             self, user_id, parent_usage_key, block_type, block_id=None,
             fields=None, continue_version=False, **kwargs
     ):
+        parent_usage_key = self._map_revision_to_branch(parent_usage_key)
         item = super(DraftVersioningModuleStore, self).create_child(
             user_id, parent_usage_key, block_type, block_id=block_id,
             fields=fields, continue_version=continue_version, **kwargs
