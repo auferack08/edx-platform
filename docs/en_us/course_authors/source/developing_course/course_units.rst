@@ -11,7 +11,7 @@ following:
 * `Viewing Units in the Outline`_
 * `Viewing the Unit Page`_
 * `Viewing Units as a Student`_
-* `Unit States`_
+* `Unit Publishing Status`_
 * `Unit States and Visibility to Students`_
 
 When developing your course, you perform the following tasks with units:
@@ -103,10 +103,10 @@ state controls the content available to students. See the next section for more
 information.
 
 
-.. _Unit States:
+.. _Unit Publishing Status:
 
 ************************************************
-Unit States
+Unit Publishing Status
 ************************************************
 
 As an course author, you work with units in the following states:

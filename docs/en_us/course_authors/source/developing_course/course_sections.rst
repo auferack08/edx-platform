@@ -9,8 +9,9 @@ To develop sections in your course, you must first understand the following:
 * `What is a Section?`_
 * `Viewing Sections in the Outline`_
 * `The Student View of a Section`_
-* `Section States`_
-* `Section States and Visibility to Students`_
+* `Sections and Visibility to Students`_
+* `Release Statuses of Sections`_
+
   
 Section tasks:
 
@@ -51,96 +52,7 @@ expanded to show its subsections:
  :alt: The students view of the course with two sections circled
 
 ************************************************
-Section States
-************************************************
-
-As a course author, you work with sections in the following states:
-
-* `Unscheduled`_
-* `Scheduled`_
-* `Released`_
-* `Released with Unpublished Changes`_
-* `Staff Only Content`_
-
-========================
-Unscheduled
-========================
-
-When you create a section, it does not have a scheduled release date.
-Regardless of the state of content within the section, the entire section is
-not visible to students.
-
-The following example shows how an section in the Unscheduled state is
-displayed in the outline, with a gray bar:
-
-.. image:: ../Images/section-unscheduled.png
- :alt: An unscheduled section
-
-To make the content available to students, you must schedule the release date.
-
-==========
-Scheduled
-==========
-
-A section that is scheduled for release on a future date will not visible to
-students until after the release date. Regardless of the state of content
-within the section, the entire section will not visible to students.
-
-The following example shows how an section in the Scheduled state is displayed
-in the outline, with a red bar:
-
-.. image:: ../Images/section-future.png
- :alt: An section scheduled to release in the future
-
-The scheduled date must pass for the section to be visible to students.
-
-===========================
-Released
-===========================
-
-A section that is released is visible to students; however students see only
-subsections within the section that are also released, and units that are
-Published.
-
-The following example shows how an section in the Released state is displayed
-in the outline, with a blue bar:
-
-.. image:: ../Images/section-released.png
- :alt: An unscheduled section
-
-==================================
-Released with Unpublished Changes
-==================================
-
-If you change a unit in a released section, the section state becomes Released
-with Unpublished Changes.  Students view the last published version of the unit
-in the section.
-
-The following example shows how an section that has unpublished changes is
-displayed in the outline, with a yellow bar. The section is expanded to show
-the unit with unpublished changes:
-
-.. image:: ../Images/section-unpublished-changes.png
- :alt: A section with unpublished changes
-
-You must publish the unit for students to see the updates.
-
-===========================
-Staff Only Content
-===========================
-
-A section may contain a unit that is hidden from students and available to
-staff only. That unit is not visible to students, regardless of the release
-date of the section or subsection.
-
-The following example shows how an section that contains a unit that is hidden
-from students is displayed in the outline, with a black bar:
-
-.. image:: ../Images/section-hidden-unit.png
- :alt: A section with a hidden unit 
-
-************************************************
-Section States and Visibility to Students
+Sections and Visibility to Students
 ************************************************
 
 Students never see a section that has an unscheduled or future release date.
@@ -155,11 +67,120 @@ not see content in:
   
 * A unit, if it was never published, or if it is hidden from students.
 
+************************************************
+Release Statuses of Sections
+************************************************
+
+As an course author, you control the release status of sections.  For the
+content of a section to be visible to students, the section must be released.
+See the following for more information about the possible releases statuses of
+sections:
+
+* `Unscheduled`_
+* `Scheduled`_
+* `Released`_
+* `Released with Unpublished Changes`_
+* `Staff Only Content`_
+
+========================
+Unscheduled
+========================
+
+If you do not change the :ref:`course start date<The Course Start Date>`
+default value, ``12/31/2029``, when you create a new section, it's release date
+will be ``Unscheduled``. When you section release date is ``Unscheduled``,
+students cannot see any content in that section, regardless of the release
+status of content within the section.
+
+If you have modified the course start date, when you create a new section, the
+default release date is the course start date.
+
+The following example shows how an section in the Unscheduled state is
+displayed in the outline, with a gray bar:
+
+.. image:: ../Images/section-unscheduled.png
+ :alt: An unscheduled section
+
+To make the content available to students, you must schedule the release date.
+
+==========
+Scheduled
+==========
+
+A section that is scheduled for release on a future date will not be visible to
+students until after the release date. Regardless of the state of content
+within the section, the entire section will not visible to students.
+
+The following example shows how a section that is scheduled for release is
+displayed in the outline, with a green bar:
+
+.. image:: ../Images/section-future.png
+ :alt: An section scheduled to release in the future
+
+The scheduled date must pass for the section to be visible to students.
+
+===========================
+Released
+===========================
+
+A section that is released is visible to students; however students see only
+subsections within the section that are also released, and units that are
+published.
+
+The following example shows how an section in the released state is displayed
+in the outline, with a blue bar:
+
+.. image:: ../Images/section-released.png
+ :alt: An unscheduled section
+
+==================================
+Released with Unpublished Changes
+==================================
+
+If you change a unit in a released section but do not publish the changes, the
+section status becomes ``Released with Unpublished Changes``.  In this
+situation students view the last published version of the modified unit.
+
+The following example shows how an section that has unpublished changes is
+displayed in the outline, with a yellow bar. The section is expanded to show
+the unit with unpublished changes:
+
+.. image:: ../Images/section-unpublished-changes.png
+ :alt: A section with unpublished changes
+
+You must publish the unit for students to see the updates.
+
+===========================
+Staff Only Content
+===========================
+
+A section can contain a unit that is hidden from students and available to
+staff only. That unit is not visible to students, regardless of the release
+date of the section or subsection.
+
+The following example shows how a section that contains a unit that is hidden
+from students is displayed in the outline, with a black bar:
+
+.. image:: ../Images/section-hidden-unit.png
+ :alt: A section with a hidden unit 
+
+
 .. _Create a Section:
 
 ****************************
 Create a Section
 ****************************
+
+If you do not change the :ref:`course start date<The Course Start Date>`
+default value, ``12/31/2029``, when you create a new section, it's release date
+will be ``Unscheduled``. 
+
+If you have modified the course start date, when you create a new section, the
+default release date is the course start date.
+
+.. caution:: 
+ If the course start date is in the past, newly created sections are
+ immediately visible to students.
 
 To create a new section:
 
@@ -172,7 +193,7 @@ To create a new section:
    name selected.
 
 #. Enter the name for the new section. Remember that students see the section
-   name in the coursware.
+   name in the courseware.
 
 #. :ref:`Add subsections<Create a Subsection>` to the new section as needed.
 
@@ -186,7 +207,7 @@ To edit a section name, hover over the section name to show the Edit icon:
   :alt: The Edit Section Name icon
 
 Click the Edit icon next to the section name. The name field becomes writable.
-Enter the new name and tab out of the field to save it.
+Enter the new name and tab or click out of the field to save the name.
 
 .. _Set a Section Release Date:
 
@@ -201,11 +222,13 @@ To set the section release date:
    .. image:: ../Images/section-settings-box.png
     :alt: The section settings icon circled
 
-   The Settings dialog box opens:
+   The Settings dialog box opens.
 
+#. Enter the release date and time for the section:
+   
    .. image:: ../Images/section-settings.png
-    :alt: The section settings icon circled
-#. Enter the release date and time for the section.
+    :alt: The section release date settings
+
 #. Click **Save**.
 
 For more information, see :ref:`Release Dates`.

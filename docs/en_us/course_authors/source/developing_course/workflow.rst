@@ -63,17 +63,15 @@ Step 3: Making Course Content Visible to Students
 ******************************************************
 
 When you create your content, you'll also specify if and when students will be
-able to see it. Content visibility depends on several factors: the release
-dates of the section and subsection, the publishing status of the unit, and the
-Hide content from students setting. For more information, see :ref:`Controlling
-Content Visibility`.
+able to see it. Content visibility depends on several factors: 
 
-Also see the following tasks:
-
-* :ref:`Set a Section Release Date`
-* :ref:`Set a Subsection Release Date`
-* :ref:`Publish a Unit`
-
+* The :ref:`course start date<The Course Start Date>`
+* The release dates of the :ref:`section<Set a Section Release Date>` and
+  :ref:`subsection<Set a Subsection Release Date>`
+* The :ref:`publishing status<Hide a Unit from Students>` of the unit
+* The :ref:`Hide content from students<Hide a Unit from Students>` setting
+  
+For more information, see :ref:`Controlling Content Visibility`.
 
 .. _Revising Content:
 

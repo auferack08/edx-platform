@@ -9,8 +9,8 @@ outline.  See the following information about working with the course outline:
 
 * `Open the Course Outline`_
 * `Example of a Developed Course in the Outline`_
-* `Viewing the Course Organization as a Student`_
-* `Navigating the Course Outline`_
+* `View the Course Organization as a Student`_
+* `Navigate the Course Outline`_
 * `Add Content in the Course Outline`_
 * `Reorganize the Course Outline`_
 * `Delete Content in the Course Outline`_
@@ -53,18 +53,18 @@ to look like this example:
 
 As this example shows, the course is organized at the following levels:
 
-* :ref:`Sections<Developing Course Sections>`, which contain:
-* :ref:`Subsections<Developing Course Subsections>`, which contain:
-* :ref:`Units<Developing Course Units>`, which contain:
-* :ref:`Components<Developing Course Components>`, which are not shown in the
-  outline.
+#. :ref:`Sections<Developing Course Sections>`
+#. :ref:`Subsections<Developing Course Subsections>`
+#. :ref:`Units<Developing Course Units>`
+#. :ref:`Components<Developing Course Components>`, which are not shown in the
+   outline.
   
 Use the links above for more information and instructions on working with each
 type of object in the course. The rest of this chapter describes the course
 organization in the outline.
 
 ********************************************************
-Viewing the Course Organization as a Student
+View the Course Organization as a Student
 ********************************************************
 
 The content you see in the outline in Studio is displayed to students in the
@@ -77,7 +77,7 @@ course content:
 .. _Navigating the Course Outline:
 
 *******************************
-Navigating the Course Outline
+Navigate the Course Outline
 *******************************
 
 You navigate the course outline by expanding and collapsing sections and
@@ -131,15 +131,19 @@ Reorganize the Course Outline
 You can reorganize your course content by dragging and dropping sections,
 subsections and units to new locations in the outline.
 
-If you wan to move a subsection to a different section, or a unit to a
+If you want to move a subsection to a different section, or a unit to a
 different subsection, first make make sure the target location is expanded.
 
 To move an section, subsection, or unit, hover over the handle on the right of
 the object's box until the mouse pointer changes to a four-headed arrow:
 
+IMAGE
+
 Then, click and drag the object to the location that you want. When you move an
 object, a blue line indicates where the object will land when you release the
 mouse button:
+
+IMAGE
 
 .. _Delete Content in the Course Outline:
 

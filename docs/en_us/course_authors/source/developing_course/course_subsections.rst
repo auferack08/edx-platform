@@ -12,14 +12,13 @@ following:
 * `The Student View of a Subsection`_
 * `Subsections and Visibility to Students`_
 * `Release Statuses of Subsections`_
-* `Subsections and Grading`_
   
 Subsection tasks:
 
 * `Create a Subsection`_
 * `Change a Subsection Name`_
-* `Set the Assignment Type and Due Date for a Subsection`_
 * `Set a Subsection Release Date`_
+* `Set the Assignment Type and Due Date for a Subsection`_
 * `Reorganize Subsection`_
 * `Delete a Subsection`_
 
@@ -60,14 +59,15 @@ is open.
 Subsections and Visibility to Students
 ************************************************
 
-Students never see a subsection that has an unscheduled or future release date.
+Students never see content in a subsection that has an unscheduled or future
+release date.
 
-If the release date of both the subsection and the section it is in have
-passed, students see published units in the subsection. 
+If the release date of both the subsection and the parent section have passed,
+students see published units in the subsection.
 
 However, students do not necessarily see all content in the subsection.
 
-Students may not see content in a unit, if it was never published, or if it is
+Students may not see content in a unit if it was never published, or if it is
 hidden from students.
 
 ************************************************
@@ -76,7 +76,8 @@ Release Statuses of Subsections
 
 As an course author, you control the release status of subsections.  For the
 content of a subsection to be visible to students, the subsection must be
-released. See the following for more information:
+released. See the following for more information about the possible releases
+statuses of subsections:
 
 * `Scheduled with Section`_
 * `Unscheduled`_
@@ -90,11 +91,11 @@ Scheduled with Section
 =======================
 
 When you create a subsection, it is set by default to release at the same time
-as the section it is in. Therefore, published content in the subsection visible
-to students at the date and time the section is released.
+as the section it is in. Therefore, published content in the subsection is
+visible to students at the date and time the section is released.
 
 The following example shows how an subsection in the Scheduled with Section
-state is displayed in the outline, with a red bar:
+state is displayed in the outline, with a green bar:
 
 .. image:: ../Images/subsection-scheduled.png
  :alt: A subsection scheduled to release with the section
@@ -104,20 +105,20 @@ state is displayed in the outline, with a red bar:
 Unscheduled
 ========================
 
-If the containing section is unscheduled, when you create a new subsection it
+If the parent section is unscheduled, when you create a new subsection it
 will also be unscheduled.
 
 Regardless of the publishing status of units within the subsection, no content
 in an unscheduled subsection is visible to students.
 
-The following example shows how an subsection in the Draft: Unscheduled state
-is displayed in the outline, with a gray bar:
+The following example shows how an unscheduled subsection is displayed in the
+outline, with a gray bar:
 
 .. image:: ../Images/subsection-unscheduled.png
  :alt: An unscheduled subsection
 
-Content is not visible to students until you set a release date and the date
-passes.
+Content in the subsection is not visible to students until you set a release
+date and the date passes.
 
 
 ===================================
@@ -142,15 +143,15 @@ The scheduled date must pass for the subsection to be visible to students.
 Scheduled with Unpublished Changes
 ==================================
 
-You can make changes to a published unit before its containing subsection
-releases. 
+You can make changes to a published unit before its parent subsection
+is released. 
 
 In this situation, when the release date for the subsection passes, the last
 published version of units within the subsection are made visible to students.
 The changes in units are not visible to students until you publish them.
 
-The following example shows how a subsection in the Scheduled state with
-unpublished changes is displayed in the outline, with a yellow bar:
+The following example shows how a scheduled subsection with unpublished changes
+is displayed in the outline, with a yellow bar:
 
 .. image:: ../Images/section-scheduled-with-changes.png
  :alt: A scheduled subsection with unpublished changes
@@ -174,10 +175,10 @@ Released
 ===========================
 
 A subsection that is released is visible to students; however students see only
-units within the subsection that are Published.
+units within the subsection that are published.
 
-The following example shows how a subsection in the Released state is
-displayed in the outline, with a blue bar:
+The following example shows how a released subsection is displayed in the
+outline, with a blue bar:
 
 .. image:: ../Images/subsection-released.png
  :alt: A released subsection
@@ -186,34 +187,15 @@ displayed in the outline, with a blue bar:
 Staff Only Content
 ===========================
 
-A subsection may contain a unit that is hidden from students and available to
+A subsection can contain a unit that is hidden from students and available to
 staff only. That unit is not visible to students, regardless of the release
 date of the subsection.
 
 The following example shows how an subsection that contains a unit that is
 hidden from students is displayed in the outline, with a black bar:
 
-
 .. image:: ../Images/section-hidden-unit.png
  :alt: A section with a hidden unit 
-
-
-
-
-.. _Subsections and Grading:
-
-*************************
-Subsections and Grading
-*************************
-
-You :ref:`set the assignment type for problems at the subsection level<Set the
-Assignment Type and Due Date for a Subsection>`. This means that all problems
-within the subsection are graded and weighted as a single type.  For example,
-if you designate the assignment type for a subsection as **Homework**, then all
-problem types in that subsection are graded as homework.
-
-For more information, see :ref:`Establish a Grading Policy`.
-
 
 .. _Create a Subsection:
 
@@ -232,26 +214,13 @@ To create a new subsection:
    courseware.
 #. :ref:`Add units<Create a Unit>` to the new subsection as needed.
 
-
-
 ********************************
 Change a Subsection Name
 ********************************
 
 To change a subsection name, click the Edit icon next to the subsection name.
-The name field becomes writable. Enter the new name and tab out of the field to
-save it.
-
-.. _Set the Assignment Type and Due Date for a Subsection:
-
-********************************************************
-Set the Assignment Type and Due Date for a Subsection
-********************************************************
-
-
-
-
-For more information, see :ref:`Establish a Grading Policy`.
+The name field becomes writable. Enter the new name and tab or click out of the
+field to save the name.
 
 .. _Set a Subsection Release Date:
 
@@ -259,12 +228,56 @@ For more information, see :ref:`Establish a Grading Policy`.
 Set a Subsection Release Date
 ********************************
 
+To set the subsection release date:
 
+#. Click the Settings icon in the subsection box:
+   
+   .. image:: ../Images/subsections-settings-icon.png
+    :alt: The subsection settings icon circled
+
+   The Settings dialog box opens.
+
+#. Enter the release date and time for the section:
+
+   .. image:: ../Images/subsection-settings.png
+    :alt: The subsection release date settings
+
+#. Click **Save**.
 
 For more information, see :ref:`Release Dates`.
 
+.. _Set the Assignment Type and Due Date for a Subsection:
+
+********************************************************
+Set the Assignment Type and Due Date for a Subsection
+********************************************************
+
+You set the assignment type for problems at the subsection level. 
+
+When you set the assignment type for a subsection, all problems within the
+subsection are graded and weighted as a single type.  For example, if you
+designate the assignment type for a subsection as **Homework**, then all
+problem types in that subsection are graded as homework.
+
+To set the assignment type and due date for a subsection:
+
+#. Click the Settings icon in the subsection box:
+   
+   .. image:: ../Images/subsections-settings-icon.png
+    :alt: The subsection settings icon circled
+
+   The Settings dialog box opens.
+
+#. Select the assignment type for this subsection in the **Grade as** field:
+   
+   .. image:: ../Images/subsection-settings-grading.png
+    :alt: The subsection settings with the assignment type and due date circled
+
+#. Enter or select a due date and time for problems in this subsection.
+#. Click **Save**.
 
 
+For more information, see :ref:`Establish a Grading Policy`.
 
 ********************************
 Reorganize Subsection
@@ -277,3 +290,17 @@ Reorganize Subsection
 ********************************
 Delete a Subsection
 ********************************
+
+When you delete a subsection, you delete all units within the section.
+
+.. warning::  
+ You cannot restore course content after you delete it. To ensure you do not
+ delete content you may need later, you can move any unused content to a
+ section in your course that you set to never release.
+
+Click the delete icon in the box for the subsection you want to delete:
+
+.. image:: ../Images/subsection-delete.png
+ :alt: The subsection with Delete icon circled
+
+You are prompted to confirm the deletion.
