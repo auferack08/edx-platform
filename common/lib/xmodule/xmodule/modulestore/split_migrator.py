@@ -60,6 +60,7 @@ class SplitMigrator(object):
             new_org, new_course, new_run, user_id,
             fields=new_fields,
             master_branch=ModuleStoreEnum.BranchName.published,
+            skip_auto_publish=True,
         )
 
         with self.split_modulestore.bulk_write_operations(new_course.id):
@@ -95,7 +96,8 @@ class SplitMigrator(object):
                     fields=self._get_fields_translate_references(
                         module, course_version_locator, new_course.location.block_id
                     ),
-                    continue_version=True
+                    continue_version=True,
+                    skip_auto_publish=True,
                 )
         # after done w/ published items, add version for DRAFT pointing to the published structure
         index_info = self.split_modulestore.get_course_index_info(course_version_locator)

@@ -947,7 +947,8 @@ class SplitMongoModuleStore(ModuleStoreWriteBase):
         source_index = self.get_course_index_info(source_course_id)
         return self.create_course(
             dest_course_id.org, dest_course_id.course, dest_course_id.run, user_id, fields=fields,
-            versions_dict=source_index['versions'], search_targets=source_index['search_targets']
+            versions_dict=source_index['versions'], search_targets=source_index['search_targets'],
+            skip_auto_publish=True,
         )
 
     def create_course(
