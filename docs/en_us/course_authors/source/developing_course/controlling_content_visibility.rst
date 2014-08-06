@@ -10,7 +10,7 @@ students and when.
 You control content visibility through three features in Studio:
 
 * `Release Dates`_
-* `Unit State`_
+* `Unit Publishing Status`_
 * `Content Hidden from Students`_
   
  All three features work together to control content visibility for students.
@@ -38,10 +38,8 @@ See:
 * :ref:`Set a Subsection Release Date`
 
 
-.. _Unit State:
-
 ***********************
-Unit State
+Unit Publishing Status
 ***********************
 
 You publish units to make them visible to students.  Students see the last
@@ -51,7 +49,7 @@ released.
 Students do not see units that have never been published, and they do not see
 unpublished changes to units or components within units.
 
-For more information, see :ref:`Unit States`.
+For more information, see :ref:`Unit Publishing Status`.
 
 .. _Content Hidden from Students:
 
@@ -59,16 +57,5 @@ For more information, see :ref:`Unit States`.
 Content Hidden from Students
 *****************************
 
-You can hide any content from students, regardless of the content's release
-date or published status.
-
-You can set a flag on a section, subsection, or unit to hide that content from
-students. All content beneath the level you select is hidden. For example, if
-you hide a section from students, all subsections and units within that section
-are automatically hidden.
-
-See:
-
-* :ref:`Hide a Section from Students`
-* :ref:`Hide a Subsection from Students`
-* :ref:`Hide a Unit from Students`
+You can :ref:`hide any unit from students<Hide a Unit from Students>`,
+regardless of the parent section and subsection's release dates.

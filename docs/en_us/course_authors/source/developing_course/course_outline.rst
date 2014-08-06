@@ -14,7 +14,6 @@ outline.  See the following information about working with the course outline:
 * `Add Content in the Course Outline`_
 * `Reorganize the Course Outline`_
 * `Delete Content in the Course Outline`_
-* `The Course Outline User Interface`_
   
 See the following chapters for information on working with different content
 levels in the outline:
@@ -49,7 +48,7 @@ for sections, subsections, and units. As you develop your course, it will begin
 to look like this example:
 
 .. image:: ../Images/outline-callouts.png
- :alt: An empty course outline
+ :alt: An outline with callouts for sections, subsections, and units
 
 As this example shows, the course is organized at the following levels:
 
@@ -137,13 +136,19 @@ different subsection, first make make sure the target location is expanded.
 To move an section, subsection, or unit, hover over the handle on the right of
 the object's box until the mouse pointer changes to a four-headed arrow:
 
-IMAGE
+**IMAGE**
 
-Then, click and drag the object to the location that you want. When you move an
-object, a blue line indicates where the object will land when you release the
-mouse button:
+Then, click and drag the object to the location that you want. 
 
-IMAGE
+If you expanded the section or subsection you are moving the object to, when
+you move the object, a blue line indicates where the object will land when you
+release the mouse button:
+
+**IMAGE**
+
+If you did not expand the section or subsection you are moving the object to,
+the outline of that section or subsection turns blue when you have moved the
+object to a valid location. You can then release the mouse button.
 
 .. _Delete Content in the Course Outline:
 
@@ -168,21 +173,3 @@ You are prompted to confirm the deletion.
 .. note::
  When you delete an object, all contained objects are deleted. For example,
  when you delete a subsection, all units in that subsection are deleted.
-
-************************************************
-The Course Outline User Interface
-************************************************
-
-==============
-Release Dates
-==============
-
-===========
-Icons
-===========
-
-===========
-Colors
-===========
-
-

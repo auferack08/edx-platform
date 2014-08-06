@@ -19,7 +19,6 @@ Subsection tasks:
 * `Change a Subsection Name`_
 * `Set a Subsection Release Date`_
 * `Set the Assignment Type and Due Date for a Subsection`_
-* `Reorganize Subsection`_
 * `Delete a Subsection`_
 
 
@@ -213,6 +212,9 @@ To create a new subsection:
    the new subsection. Remember that students see the subsection name in the
    courseware.
 #. :ref:`Add units<Create a Unit>` to the new subsection as needed.
+   
+It is recommended that you :ref:`test course content <Testing Your Course
+Content>` as you create new subsections.
 
 ********************************
 Change a Subsection Name
@@ -276,14 +278,7 @@ To set the assignment type and due date for a subsection:
 #. Enter or select a due date and time for problems in this subsection.
 #. Click **Save**.
 
-
 For more information, see :ref:`Establish a Grading Policy`.
-
-********************************
-Reorganize Subsection
-********************************
-
-
 
 .. _Delete a Subsection:
 

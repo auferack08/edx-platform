@@ -36,8 +36,6 @@ Before you begin, you should understand the building blocks of an edX course.
 * :ref:`Course components<Developing Course Components>` are objects within
   units that contain your actual course content.
 
- RELATIONSHIP DIAGRAM
-
 .. _Creating New Course Content:
 
 ****************************************
@@ -47,14 +45,27 @@ Step 2: Creating New Course Content
 Once you understand the way edX courses are structured, you can start
 organizing your content and entering it into Studio. 
 
-WORKFLOW DIAGRAM
+You create :ref:`sections<Create a Section>`, :ref:`subsections<Create a
+Subsection>`, and :ref:`units<Create a Unit>` in the :ref:`course
+outline<Developing Your Course Outline>`. 
 
-For information, see the following tasks:
+For graded subsections, you also
+:ref:`set the assignment type and due date<Set the Assignment Type and Due Date
+for a Subsection>`. 
 
-#. :ref:`Create a Section`
-#. :ref:`Create a Subsection`
-#. :ref:`Create a Unit`
-#. :ref:`Add a Component`
+You :ref:`create components<Add a Component>` in the unit
+page.
+
+In addition, you :ref:`control content visibility<Controlling Content
+Visibility>` by setting release dates on the outline and publishing units.
+
+The following diagram summarizes the content creation workflow:
+
+.. image:: ../Images/workflow-create-content.png
+ :alt: Diagram of the content creation process
+
+It is recommended that you :ref:`test course content <Testing Your Course
+Content>` throughout the creation process.
 
 .. _Making Course Content Visible to Students:
 
@@ -79,15 +90,20 @@ For more information, see :ref:`Controlling Content Visibility`.
 Step 4: Revising Content
 ****************************
 
-You can revise your course content at any time. When you reorganize sections
-and subsections, the new order is immediately visible to students. When you
-change a unit, or components within a unit, you must publish those changes to
-make them visible to students.
+You can revise your course content at any time. When you :ref:`reorganize
+sections, subsections, and units<Reorganize the Course Outline>` in the outline
+the new order is immediately visible to students, if the section and subsection
+are released.
 
-WORKFLOW DIAGRAM
+When you :ref:`edit a unit<Edit a Unit>`, or :ref:`components<Add a Component>`
+within a unit, you must
+:ref:`publish<Publish a Unit>` those changes to make them visible to students.
 
-* :ref:`Reorganize the Course Outline`
-* :ref:`Edit a Unit`
-* :ref:`Add<Add a Component>`, :ref:`edit<Edit a Component>`, or
-  :ref:`delete<Delete a Component>` components.
-* :ref:`Publish a Unit`
+The following diagram summarizes the content revision workflow and content
+visibility:
+
+.. image:: ../Images/workflow-revise-content.png
+ :alt: Diagram of the content creation process
+
+It is recommended that you :ref:`test course content <Testing Your Course
+Content>` during the revision process.

@@ -18,7 +18,6 @@ Section tasks:
 * `Create a Section`_
 * `Change a Section Name`_
 * `Set a Section Release Date`_
-* `Reorganize Sections`_
 * `Delete a Section`_
 
 
@@ -196,6 +195,9 @@ To create a new section:
    name in the courseware.
 
 #. :ref:`Add subsections<Create a Subsection>` to the new section as needed.
+   
+It is recommended that you :ref:`test course content <Testing Your Course
+Content>` as you create new sections.
 
 ********************************
 Change a Section Name
@@ -232,11 +234,6 @@ To set the section release date:
 #. Click **Save**.
 
 For more information, see :ref:`Release Dates`.
-
-********************************
-Reorganize Sections
-********************************
-
 
 
 ********************************

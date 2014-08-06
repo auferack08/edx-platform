@@ -29,7 +29,7 @@ students.
 When you preview your course, you see the latest course content as configured
 in Studio. You see content in units in the state
 :ref:`Draft (Never Published)`, :ref:`Draft (Unpublished Changes)`, or
-:ref:`Unpublished (Staff Only)` while students can see only the last
+:ref:`Visible to Staff Only` while students can see only the last
 published version of a unit in the live course.
 
 For example, you publish a unit with a video and discussion:
