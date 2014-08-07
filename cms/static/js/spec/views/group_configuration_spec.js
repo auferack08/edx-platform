@@ -33,7 +33,11 @@ define([
         usageText: '.group-configuration-usage-text',
         usageTextAnchor: '.group-configuration-usage-text > a',
         usageUnit: '.group-configuration-usage-unit',
-        usageUnitAnchor: '.group-configuration-usage-unit > a',
+        usageUnitAnchor: '.group-configuration-usage-unit a',
+        usageUnitMessage: '.group-configuration-validation-message',
+        usageUnitIcon: '.group-configuration-usage-unit > i',
+        warningMessage: '.group-configuration-validation-text',
+        warningIcon: '.wrapper-group-configuration-validation > i',
         note: '.wrapper-delete-button'
     };
 
@@ -160,18 +164,18 @@ define([
         });
 
         it('should show non-empty usage appropriately', function() {
-            var usageUnitAnchors;
+            var usageUnitAnchors, usageUnitMessages, usageUnitIcons;
 
-            this.model.set('usage',
-                [
-                    {'label': 'label1', 'url': 'url1'},
-                    {'label': 'label2', 'url': 'url2'}
-                ]
-            );
+            this.model.set('usage', [
+                {'label': 'label1', 'url': 'url1', 'validation': 'message1'},
+                {'label': 'label2', 'url': 'url2', 'validation': 'message2'}
+            ]);
             this.model.set('showGroups', false);
             this.view.$('.show-groups').click();
 
             usageUnitAnchors = this.view.$(SELECTORS.usageUnitAnchor);
+            usageUnitMessages = this.view.$(SELECTORS.usageUnitMessage);
+            usageUnitIcons = this.view.$(SELECTORS.usageUnitIcon);
 
             expect(this.view.$(SELECTORS.note)).toHaveAttr(
                 'data-tooltip', 'Cannot delete when in use by an experiment'
@@ -186,12 +190,15 @@ define([
             expect(usageUnitAnchors.eq(0).attr('href')).toBe('url1');
             expect(usageUnitAnchors.eq(1)).toContainText('label2');
             expect(usageUnitAnchors.eq(1).attr('href')).toBe('url2');
+            expect(usageUnitMessages.eq(0)).toContainText('message1');
+            expect(usageUnitMessages.eq(1)).toContainText('message2');
+            expect(usageUnitIcons.length).toBe(2);
         });
 
         it('should hide non-empty usage appropriately', function() {
             this.model.set('usage', [
-                {'label': 'label1', 'url': 'url1'},
-                {'label': 'label2', 'url': 'url2'}
+                {'label': 'label1', 'url': 'url1', 'validation': 'message1'},
+                {'label': 'label2', 'url': 'url2', 'validation': 'message2'}
             ]);
             this.model.set('showGroups', true);
             this.view.$('.hide-groups').click();
@@ -417,6 +424,24 @@ define([
                 'data-tooltip', 'Cannot delete when in use by an experiment'
             );
             expect(this.view.$('.delete')).toHaveClass('is-disabled');
+        });
+
+        it('contains warning message if it is in use', function () {
+            this.model.set('usage', [ {'label': 'label1', 'url': 'url1'} ]);
+            this.view.render();
+            expect(this.view.$(SELECTORS.warningMessage)).toContainText(
+                'This configuration is currently used in content ' +
+                'experiments. If you make changes to the groups, you may ' +
+                'need to edit those experiments.'
+            );
+            expect(this.view.$(SELECTORS.warningIcon)).toExist();
+        });
+
+        it('does not contain warning message if it is not in use', function () {
+            this.model.set('usage', []);
+            this.view.render();
+            expect(this.view.$(SELECTORS.warningMessage)).not.toExist();
+            expect(this.view.$(SELECTORS.warningIcon)).not.toExist();
         });
     });
 

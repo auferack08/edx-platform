@@ -64,7 +64,7 @@
           <li class="group-configuration-usage-unit">
             <p><a href=<%= unit.url %> ><%= unit.label %></a></p>
             <i class="icon-warning-sign"></i>
-            <p class="group-configuration-validation-text">
+            <p class="group-configuration-validation-message">
               <%= unit.validation %>
             </p>
           </li>
