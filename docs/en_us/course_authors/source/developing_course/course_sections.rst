@@ -228,8 +228,6 @@ To set the section release date:
 
 #. Enter the release date and time for the section:
    
-   **REDO**
-   
    .. image:: ../Images/section-settings.png
     :alt: The section release date settings
 

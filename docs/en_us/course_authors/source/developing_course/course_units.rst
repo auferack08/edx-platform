@@ -161,8 +161,6 @@ Draft (Never Published)
 When you create a new unit and add components to it, the unit's publishing
 status is **Draft (Never Published)**, as shown in the right panel:
 
-**REDO**
-
 .. image:: ../Images/unit-never-published.png
  :alt: Status panel of a unit that has never been published
 
@@ -183,8 +181,6 @@ When you publish a unit that is in a section and subsection that have released,
 the unit's publishing status is **Published and Live**, as shown in the right
 panel:
 
-**REDO**
-
 .. image:: ../Images/unit-published.png
  :alt: Status panel of a unit that is published
 
@@ -200,10 +196,8 @@ When you publish a unit that is in a section and subsection that have not
 released, the unit's publishing status is **Published and Not Yet Released**,
 as shown in the right panel:
 
-**REDO**
-
-.. image:: ../Images/unit-published.png
- :alt: Status panel of a unit that is published
+.. image:: ../Images/unit-published_unreleased.png
+ :alt: Status panel of a unit that is published but not released
 
 Students do not this this unit until the release date passes.
 
@@ -216,8 +210,6 @@ Draft (Unpublished Changes)
 When you edit a published unit, whether or not it is released, the unit's
 publishing status changes to **Draft (Unpublished Changes)**, as shown in the
 right panel:
-
-**REDO**
 
 .. image:: ../Images/unit-pending-changes.png
  :alt: Status panel of a unit that has pending changes
@@ -237,8 +229,6 @@ Visible to Staff Only
 
 When you :ref:`hide a unit from students<Hide a Unit from Students>`, the
 unit's publishign status changes to **Visible to Staff Only**.
-
-**REDO**
 
 .. image:: ../Images/unit-unpublished.png
  :alt: Status panel of a unit that has pending changes
@@ -268,8 +258,6 @@ To create a unit from the outline:
 To create a new unit from a unit page:
 
 #. In the **Unit Location** panel, click **New Unit**.
-
-   **REDO**
 
    .. image:: ../Images/unit_location.png
     :alt: The Unit Location panel in the Unit page
@@ -395,8 +383,6 @@ View a Published Unit
 To view the last published version of a unit in the LMS, click **View Published
 Version**.
 
-**REDO**
-
 .. image:: ../Images/unit_view_live_button.png
  :alt: Unit page with View Published Version button circled
 
@@ -419,8 +405,6 @@ You can prevent students from seeing a unit regardless of the unit state or the
 release schedules of the section and subsection.
 
 Check **Hide from students** in the status panel:
-
-**REDO**
 
 .. image:: ../Images/unit-hide.png
  :alt: Unit status panel with Hide from Students checked
@@ -456,8 +440,6 @@ When you delete a unit, you delete all components within the unit.
  section in your course that you set to never release.
 
 Click the delete icon in the box for the unit you want to delete:
-
-**REDO**
 
 .. image:: ../Images/section-delete.png
  :alt: The section with Delete icon circled
