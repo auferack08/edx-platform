@@ -643,7 +643,7 @@ def create_xblock_info(xblock, data=None, metadata=None, include_ancestor_info=F
     # Treat DEFAULT_START_DATE as a magic number that means the release date has not been set
     release_date = get_default_time_display(xblock.start) if xblock.start != DEFAULT_START_DATE else None
     visibility_state = _compute_visibility_state(xblock, child_info, is_unit_with_changes, course_outline) if not xblock.category == 'course' else None
-    published = modulestore().has_item(xblock.location, revision=ModuleStoreEnum.RevisionOption.published_only)
+    published = modulestore().compute_publish_state(xblock) != PublishState.private
 
     xblock_info = {
         "id": unicode(xblock.location),
