@@ -5,19 +5,6 @@
           <%= gettext(error.message) %>
         </div>
     <% } %>
-    <% if (!_.isEmpty(usage)) { %>
-      <div class="group-configuration-edit-validation message message-status message-status error is-shown" name="group-configuration-edit-error">
-        <h4 class="group-configuration-edit-validation-text"><%= gettext('Warnings:') %></h4>
-        <ol class="group-configuration-edit-validation-list">
-          <% _.each(usage, function(unit) { %>
-            <li class="group-configuration-edit-validation-unit">
-              <p><a href=<%= unit.url %> ><%= unit.label %></a> : </p>
-              <p><%= unit.validation %></p>
-            </li>
-          <% }) %>
-        </ol>
-      </div>
-    <% } %>
         <fieldset class="group-configuration-fields">
             <legend class="sr"><%= gettext("Group Configuration information") %></legend>
             <div class="input-wrap field text required add-group-configuration-name <% if(error && error.attributes && error.attributes.name) { print('error'); } %>">
@@ -45,6 +32,14 @@
             <ol class="groups list-input enum"></ol>
             <button class="action action-add-group"><i class="icon-plus"></i> <%= gettext("Add another group") %></button>
         </fieldset>
+        <% if (!_.isEmpty(usage)) { %>
+            <div class="wrapper-group-configuration-validation">
+                    <i class="icon-warning-sign"></i>
+                    <p class="group-configuration-validation-text">
+                        <%= gettext('This configuration is currently used in content experiments. If you make changes to the groups, you may need to edit those experiments.') %>
+                    </p>
+            </div>
+        <% } %>
     </div>
     <div class="actions">
         <button class="action action-primary" type="submit"><% if (isNew) { print(gettext("Create")) } else { print(gettext("Save")) } %></button>

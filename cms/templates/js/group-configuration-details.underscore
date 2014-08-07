@@ -63,7 +63,10 @@
         <% _.each(usage, function(unit) { %>
           <li class="group-configuration-usage-unit">
             <p><a href=<%= unit.url %> ><%= unit.label %></a></p>
-            <p><%= unit.validation %></p>
+            <i class="icon-warning-sign"></i>
+            <p class="group-configuration-validation-text">
+              <%= unit.validation %>
+            </p>
           </li>
         <% }) %>
       </ol>
