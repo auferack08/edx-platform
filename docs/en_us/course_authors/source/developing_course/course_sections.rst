@@ -86,16 +86,16 @@ Unscheduled
 ========================
 
 If you do not change the :ref:`course start date<The Course Start Date>`
-default value, ``12/31/2029``, when you create a new section, it's release date
-will be ``Unscheduled``. When you section release date is ``Unscheduled``,
-students cannot see any content in that section, regardless of the release
-status of content within the section.
+default value, ``1/1/2030 00:00:00 UTC``, when you create a new section, its
+release date will be ``Unscheduled``. When the section release date is
+``Unscheduled``, students cannot see any content in that section, regardless of
+the publishing status of that content.
 
 If you have modified the course start date, when you create a new section, the
 default release date is the course start date.
 
-The following example shows how an section in the Unscheduled state is
-displayed in the outline, with a gray bar:
+The following example shows how an unscheduled section is displayed in the
+outline, with a gray bar:
 
 .. image:: ../Images/section-unscheduled.png
  :alt: An unscheduled section
@@ -107,8 +107,8 @@ Scheduled
 ==========
 
 A section that is scheduled for release on a future date will not be visible to
-students until after the release date. Regardless of the state of content
-within the section, the entire section will not visible to students.
+students until after the release date. Regardless of the publishing status of
+content within the section, the entire section will not visible to students.
 
 The following example shows how a section that is scheduled for release is
 displayed in the outline, with a green bar:
@@ -126,8 +126,8 @@ A section that is released is visible to students; however students see only
 subsections within the section that are also released, and units that are
 published.
 
-The following example shows how an section in the released state is displayed
-in the outline, with a blue bar:
+The following example shows how a released section is displayed in the outline,
+with a blue bar:
 
 .. image:: ../Images/section-released.png
  :alt: An unscheduled section
@@ -140,7 +140,7 @@ If you change a unit in a released section but do not publish the changes, the
 section status becomes ``Released with Unpublished Changes``.  In this
 situation students view the last published version of the modified unit.
 
-The following example shows how an section that has unpublished changes is
+The following example shows how a released section with unpublished changes is
 displayed in the outline, with a yellow bar. The section is expanded to show
 the unit with unpublished changes:
 
@@ -171,7 +171,7 @@ Create a Section
 ****************************
 
 If you do not change the :ref:`course start date<The Course Start Date>`
-default value, ``12/31/2029``, when you create a new section, it's release date
+default value, ``1/1/2030``, when you create a new section, its release date
 will be ``Unscheduled``. 
 
 If you have modified the course start date, when you create a new section, the
@@ -228,13 +228,14 @@ To set the section release date:
 
 #. Enter the release date and time for the section:
    
+   **REDO**
+   
    .. image:: ../Images/section-settings.png
     :alt: The section release date settings
 
 #. Click **Save**.
 
 For more information, see :ref:`Release Dates`.
-
 
 ********************************
 Delete a Section

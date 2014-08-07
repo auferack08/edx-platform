@@ -130,9 +130,6 @@ Reorganize the Course Outline
 You can reorganize your course content by dragging and dropping sections,
 subsections and units to new locations in the outline.
 
-If you want to move a subsection to a different section, or a unit to a
-different subsection, first make make sure the target location is expanded.
-
 To move an section, subsection, or unit, hover over the handle on the right of
 the object's box until the mouse pointer changes to a four-headed arrow:
 

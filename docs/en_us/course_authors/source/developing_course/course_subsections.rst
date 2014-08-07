@@ -207,10 +207,10 @@ To create a new subsection:
 #. In the outline, expand the section in which you want to create a new
    subsection.
 #. Click **New Subsection** at the bottom of the expanded section. A new
-   subsection is added at the end of the section.
-#. Click the Edit icon next to the new subsection name, then enter the name for
-   the new subsection. Remember that students see the subsection name in the
-   courseware.
+   subsection is added at the end of the section, with the subsection name
+   selected.
+#. Enter the name for the new subsection. Remember that students see the
+   subsection name in the courseware.
 #. :ref:`Add units<Create a Unit>` to the new subsection as needed.
    
 It is recommended that you :ref:`test course content <Testing Your Course

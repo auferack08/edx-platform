@@ -5,14 +5,15 @@ Testing Your Course Content
 ###########################
 
 The way your course looks in Studio is not the way that students will see and
-experience it when it is live. To test the content that you add when you are
-building your course, you can view and interact with your course from a
-student's point of view.
+experience it when it is live. 
 
-You can:
+It is recommended that you test your content continually as you build your
+course, so you can interact with your course from a student's point of view.
 
-* :ref:`Preview Course Content`
-* :ref:`View Your Live Course`
+To test your content, you can:
+
+* `Preview Course Content`_
+* `View Your Live Course`_
 
 For information about setting up a beta test for your course, see
 :ref:`Beta_Testing`.
@@ -26,11 +27,10 @@ Preview Course Content
 You preview course content before you publish it to test how it will look to
 students.
  
-When you preview your course, you see the latest course content as configured
-in Studio. You see content in units in the state
+When you preview course content, you see the latest course content as
+configured in Studio. You see content in units with the publishing status
 :ref:`Draft (Never Published)`, :ref:`Draft (Unpublished Changes)`, or
-:ref:`Visible to Staff Only` while students can see only the last
-published version of a unit in the live course.
+:ref:`Visible to Staff Only`. 
 
 For example, you publish a unit with a video and discussion:
 
@@ -41,7 +41,7 @@ Students see the same content in the LMS:
 IMAGE OF UNIT IN LMS
 
 You then decide to add a multiple choice question to the unit, but you do not
-yet publish the changes.
+yet publish the change.
 
 IMAGE OF DRAFT UNIT - With PREVIEW button circled
 
@@ -57,9 +57,9 @@ In the live course, students continue to see the same content, without the
 multiple choice question, until you :ref:`publish the change<Publish a Unit>`.
 
 .. note:: 
-  **Preview Changes** in not available when the unit's state is
-  :ref:`Published`, because in this case the preview and live version are
-  exactly the same. You can view the live course to see the published content.
+  **Preview Changes** in not available when the unit's state is :ref:`Published
+  and Live`, because in this case the preview and live version are exactly the
+  same. You can view the live course to see the published content.
 
  
 .. _View Your Live Course:
@@ -101,17 +101,17 @@ gets a red X for incorrect.
  
 In **Staff View**:
 
-* You see all units in the state :ref:`Published`. For units in the state
-  :ref:`Draft (Unpublished Changes)` or :ref:`Unpublished (Staff Only)`, you
+* You see all units that are :ref:`Published and Live`. For units that are
+  :ref:`Draft (Unpublished Changes)` or :ref:`Visible to Staff Only`, you
   see the last published version of the unit. You see these units
   regardless of the release dates of the containing section or subsection.
 
-* You do not see units that are in the state :ref:`Draft (Never Published)`. To
+* You do not see units that are :ref:`Draft (Never Published)`. To
   see these units, you must use Preview mode as described in :ref:`Preview
   Course Content`.
 
 * You can access the Instructor Dashboard, which has features and reports that
-  help you run your course.
+  help you :ref:`run your course<Running Your Course Index>`.
 
 =================
 Student View
@@ -129,16 +129,15 @@ View** or **Student View** in the upper right corner.
 
 In **Student View**:
 
-* You do not see units in sections or subsections that have not yet been
-  released.
+* You do not sections or subsections that have not yet been released.
 
-* If the section and subsection are released, you see units in the state
-  :ref:`Published`. For units in the state
+* If the section and subsection are released, you see units that are
+  :ref:`Published and Live`. For units that are
   :ref:`Draft (Unpublished Changes)`, you see the last published version of the
   unit. 
 
-* You do not see units that are in the state :ref:`Draft (Never Published)` or
-  :ref:`Unpublished (Staff Only)`. To see these units, you must use Preview
+* You do not see units that are :ref:`Draft (Never Published)` or
+  :ref:`Visible to Staff Only`. To see these units, you must use Preview
   mode as described in :ref:`Preview Course Content`.
 
 * You can access the Instructor Dashboard, which has features and reports that
