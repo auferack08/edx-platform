@@ -3,7 +3,7 @@ Test for split test XModule
 """
 from django.core.urlresolvers import reverse
 from django.test.utils import override_settings
-from mock import MagicMock
+from mock import MagicMock, patch
 
 from student.tests.factories import UserFactory, CourseEnrollmentFactory
 from courseware.tests.modulestore_config import TEST_DATA_MIXED_MODULESTORE
@@ -111,12 +111,14 @@ class SplitTestBase(ModuleStoreTestCase):
             value=str(user_tag)
         )
 
-        resp = self.client.get(reverse(
-            'courseware_section',
-            kwargs={'course_id': self.course.id.to_deprecated_string(),
-                    'chapter': self.chapter.url_name,
-                    'section': self.sequential.url_name}
-        ))
+        with patch("xmodule.vertical_module.VerticalModule.update_names") as mocked:
+            mocked.return_value = None
+            resp = self.client.get(reverse(
+                'courseware_section',
+                kwargs={'course_id': self.course.id.to_deprecated_string(),
+                        'chapter': self.chapter.url_name,
+                        'section': self.sequential.url_name}
+            ))
         content = resp.content
 
         # Assert we see the proper icon in the top display
@@ -178,7 +180,7 @@ class TestVertSplitTestVert(SplitTestBase):
         c0_url = self.course.id.make_usage_key("vertical", "split_test_cond0")
         c1_url = self.course.id.make_usage_key("vertical", "split_test_cond1")
 
-        split_test = ItemFactory.create(
+        self.split_test = ItemFactory.create(
             parent_location=vert1.location,
             category="split_test",
             display_name="Split test",
@@ -186,23 +188,38 @@ class TestVertSplitTestVert(SplitTestBase):
             group_id_to_child={"0": c0_url, "1": c1_url},
         )
 
-        cond0vert = ItemFactory.create(
-            parent_location=split_test.location,
+        self.cond0vert = ItemFactory.create(
+            parent_location=self.split_test.location,
             category="vertical",
             display_name="Condition 0 vertical",
             location=c0_url,
         )
-        video0 = self._video(cond0vert, 0)
-        problem0 = self._problem(cond0vert, 0)
+        video0 = self._video(self.cond0vert, 0)
+        problem0 = self._problem(self.cond0vert, 0)
 
-        cond1vert = ItemFactory.create(
-            parent_location=split_test.location,
+        self.cond1vert = ItemFactory.create(
+            parent_location=self.split_test.location,
             category="vertical",
             display_name="Condition 1 vertical",
             location=c1_url,
         )
-        video1 = self._video(cond1vert, 1)
-        html1 = self._html(cond1vert, 1)
+        video1 = self._video(self.cond1vert, 1)
+        html1 = self._html(self.cond1vert, 1)
+
+
+    def test_get_display_name_for_vertical(self):
+        """
+        Verify that we get correct names for every child vertical.
+        """
+        self.assertEqual(
+            self.partition.groups[0].name,
+            self.split_test.get_display_name_for_vertical(self.cond0vert)
+        )
+        self.assertEqual(
+            self.partition.groups[1].name,
+            self.split_test.get_display_name_for_vertical(self.cond1vert)
+        )
+         
 
 
 class TestSplitTestVert(SplitTestBase):

@@ -35,7 +35,9 @@ class VerticalModule(VerticalFields, XModule, StudioEditableModule):
         stored in group configuration data and vertical names, stored in vertical xfields.
         """
         parent = self.get_parent_xblock()
-        if getattr(parent, 'get_display_name_for_vertical'):
+
+        if getattr(parent, 'get_display_name_for_vertical', None):
+
             updated_name = parent.get_display_name_for_vertical(self)
             if updated_name:
                 self.display_name = updated_name
