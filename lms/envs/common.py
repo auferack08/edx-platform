@@ -148,6 +148,9 @@ FEATURES = {
     # Staff Debug tool.
     'ENABLE_STUDENT_HISTORY_VIEW': True,
 
+    # Optimizely for the LMS
+    'OPTIMIZELY_LMS': True,
+
     # segment.io for LMS--need to explicitly turn it on for production.
     'SEGMENT_IO_LMS': False,
 
