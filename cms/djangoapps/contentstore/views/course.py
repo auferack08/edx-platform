@@ -1134,7 +1134,10 @@ class GroupConfiguration(object):
         """
         Get list of validation messages for experiment.
         """
-        return [message.message_text for message in split_test.validation_messages()]
+        return [
+            {'message': message.message_text, 'type': message.message_type}
+            for message in split_test.validation_messages()
+        ]
 
     @staticmethod
     def _get_usage_info(store, course, split_tests):
