@@ -63,10 +63,16 @@
         <% _.each(usage, function(unit) { %>
           <li class="group-configuration-usage-unit">
             <p><a href=<%= unit.url %> ><%= unit.label %></a></p>
-            <i class="icon-warning-sign"></i>
-            <p class="group-configuration-validation-message">
-              <%= unit.validation %>
-            </p>
+            <% _.each(unit.validation, function(validation) { %>
+              <% if (validation.type === 'warning') { %>
+                <i class="icon-warning-sign"></i>
+              <% } else if (validation.type === 'error') { %>
+                <i class="icon-exclamation-sign"></i>
+              <% } %>
+              <p class="group-configuration-validation-message">
+                <%= validation.message %>
+              </p>
+            <% }) %>
           </li>
         <% }) %>
       </ol>

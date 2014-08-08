@@ -214,6 +214,12 @@
                 float: left;
               }
 
+              .icon-exclamation-sign {
+                margin: ($baseline/4) ($baseline/2) 0 ($baseline*1.5);
+                color: $red-l2;
+                float:left;
+              }
+
               .group-configuration-validation-message {
                 overflow: auto;
               }
