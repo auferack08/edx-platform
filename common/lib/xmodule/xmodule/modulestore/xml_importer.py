@@ -172,15 +172,7 @@ def import_from_xml(
 
             # Creates a new course if it doesn't already exist
             if create_new_course_if_not_present and not store.has_course(dest_course_id, ignore_case=True):
-                try:
-                    store.create_course(dest_course_id.org, dest_course_id.course, dest_course_id.run, user_id)
-                except DuplicateCourseError:
-                    # course w/ same org and course exists
-                    log.debug(
-                        "Skipping import of course with id, {0},"
-                        "since it collides with an existing one".format(dest_course_id)
-                    )
-                    continue
+                store.create_course(dest_course_id.org, dest_course_id.course, dest_course_id.run, user_id)
 
             with store.bulk_write_operations(dest_course_id):
                 course_data_path = None
